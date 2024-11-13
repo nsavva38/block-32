@@ -4,13 +4,19 @@ const router = express.Router();
 
 const employees = require("../data/employees");
 
-router.post("/", (req, res) => {
+router.post("/", (req, res, next) => {
+
+  if(!req.body.name) {
+    next({
+      status: 400,
+      message: "Invalid Name"
+    })
+  } 
   const newID = (employees.length) + 1;
   const newEmployee = {
     "id": newID,
     "name": req.body.name
   };
-
   
   employees.push(newEmployee);
   
