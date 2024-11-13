@@ -17,9 +17,9 @@ GET {{host}}/employees/random
 
 ### Post new employee
 POST {{host}}/employees
-Content-Type: application/json
+# Content-Type: application/json
 
-{
-  "id": 9001,
-  "name": "Anakin Skywalker"
-}
+# {
+#   "id": 9001,
+#   "name": "Anakin Skywalker"
+# }

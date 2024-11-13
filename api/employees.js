@@ -5,8 +5,14 @@ const router = express.Router();
 const employees = require("../data/employees");
 
 router.post("/", (req, res) => {
+  const newID = (employees.length) + 1;
+  console.log(employees[9]);
   console.log("req.body:", req.body);
-  const newEmployee = req.body;
+  const newEmployee = {
+    "id": newID,
+    "name": "Anakin Skywalker"
+  };
+
   
   employees.push(newEmployee);
   
