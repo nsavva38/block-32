@@ -14,15 +14,6 @@ app.use((req, res, next) => {
   })
 });
 
-// app.use((req, res, next) => {
-//   if(!req.body.name) {
-//     next({
-//       status: 400,
-//       message: "Invalid Name"
-//     })
-
-//   }
-// })
 
 
 app.use((err, req, res, next) => {
